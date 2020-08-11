@@ -1,0 +1,5 @@
+#!/bin/bash
+dbname=facetablet
+table=recog_user
+sshpass -p adminRKB ssh ubuntu@192.168.4.24 "PGPASSWORD=facever pg_dump -U facever -h localhost $dbname" | \
+PGPASSWORD=facever psql -U facever -d $dbname

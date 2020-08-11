@@ -1,0 +1,12 @@
+# recognition-db_sync.timer
+[Unit] 
+Description=Runs the recognition-db_sync.service
+
+[Timer] 
+OnBootSec=1m
+OnCalendar=*:0/15
+# OnCalendar=*-*-* *:*:00 ## if you want to execute every minute 
+Unit=recognition-db_sync.service 
+
+[Install] 
+WantedBy=multi-user.target

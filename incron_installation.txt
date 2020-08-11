@@ -1,0 +1,30 @@
+## To automatically change the ownership of image files created by a docker container
+## incrontab monitors specified folders, and change the ownership to the desired user
+
+1. Install incron
+```
+sudo apt-get install incron`
+```
+
+2. Allow user `root` to use incron
+```
+sudo nano /etc/incron.allow
+```
+
+3. Add the user `root` to the files
+```
+root
+```
+
+4. Specify which directory and which user you want to have ownership of the directory
+```
+sudo incrontab -u root -e
+```
+```
+<directory-to-monitor> IN_CREATE /bin/chown -R <user>:<group> <directory-to-change-ownership>
+```
+the command above has three parts
+
+a. `<directory-to-monitor>` = the directory to monitor for created files
+b. `IN_CREATE` = when `<directory-to-monitor>` undergoes a change, it will then execute the next part
+c. `/bin/chown -R <user>:<group> <directory-to-change-ownership>` = the command to execute when a change to `<directory-to-monitor>` happens

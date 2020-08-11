@@ -1,0 +1,3 @@
+rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p 25025" \
+ubuntu@210.210.156.73:/home/ubuntu/workspace/face-recognition/fr_dam/media/data_face_mask/ \
+/home/ubuntu/workspace/face-recognition/fr_dam/media/data_face_mask/

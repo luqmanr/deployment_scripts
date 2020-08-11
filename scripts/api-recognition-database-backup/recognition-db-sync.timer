@@ -1,0 +1,11 @@
+# recognition-db_sync.timer
+[Unit] 
+Description=Runs the recognition-db_sync.service
+
+[Timer] 
+OnBootSec=5m
+OnCalendar=*:0/15 
+Unit=recognition-db_sync.service 
+
+[Install] 
+WantedBy=multi-user.target

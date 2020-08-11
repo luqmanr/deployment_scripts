@@ -1,0 +1,11 @@
+# minetest.service
+[Unit] 
+Description= API Recognition database sync service, from master -> slave
+After=network.target
+
+[Service] 
+ExecStart=/home/ubuntu/scripts/recognition-db-sync_script
+# ExecStop=
+
+[Install] 
+WantedBy= multi-user.target

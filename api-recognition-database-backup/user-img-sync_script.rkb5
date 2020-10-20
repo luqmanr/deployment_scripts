@@ -1,0 +1,20 @@
+#!/bin/bash
+## sync user_images
+rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p 25025" \
+ubuntu@202.158.77.42:/home/ubuntu/workspace/face-recognition/fr_dam/media/data_face_mask/ \
+/home/ubuntu/workspace/face-recognition/fr_dam/media/data_face_mask/
+
+rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p 25025" \
+ubuntu@202.158.77.42:/home/ubuntu/workspace/face-recognition/v1.0/media/data_face_mask/ \
+/home/ubuntu/workspace/face-recognition/v1.0/media/data_face_mask/
+
+## sync .csv database
+rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p 25025" \
+ubuntu@202.158.77.42:/home/ubuntu/workspace/face-recognition/fr_dam/media/csv_database_mask/ \
+/home/ubuntu/workspace/face-recognition/fr_dam/media/csv_database_mask/
+
+rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p 25025" \
+ubuntu@202.158.77.42:/home/ubuntu/workspace/face-recognition/v1.0/media/csv_database_mask/ \
+/home/ubuntu/workspace/face-recognition/v1.0/media/csv_database_mask/
+
+./user-img-backup_script

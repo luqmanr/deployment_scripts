@@ -1,0 +1,7 @@
+#!/bin/bash
+name="ui-absensi"
+workdir="/mnt/c/Users/User PC/workspace/RKB-Website/ui-absensi"
+tmux new -s $name -d
+tmux send-keys -t $name:0 "cd '$workdir' && npm run serve" Enter
+
+tmux a -t $name

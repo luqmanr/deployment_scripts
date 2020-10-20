@@ -1,8 +1,9 @@
 #!/bin/bash
-
+scriptdir="$(dirname "$0")"
 ## Start Docker Containers
-/home/ubuntu/scripts/FR-Docker.start.sh
-/home/ubuntu/scripts/SSD-Docker.start.sh
+
+$scriptdir/FR-Docker.start.sh
+$scriptdir/SSD-Docker.start.sh
 
 sleep 10
 

@@ -1,3 +1,4 @@
 #!/bin/bash
-/home/ubuntu/scripts/backend-go.start.sh && \
-/home/ubuntu/scripts/core-fr.start.sh
+scriptdir="$(dirname "$0")"
+exec $scriptdir/backend-go.start.sh && \
+exec $scriptdir/core-fr.start.sh

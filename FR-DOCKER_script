@@ -9,4 +9,4 @@ docker run --gpus all --rm -it -d \
 --name=api-recognition \
 --privileged \
 -v /rkbdev/facetablet/data/:/rkbdev/facetablet/data/ \
--v $HOME/workspace/face-recognition/v1.0/:/workspace/ risetai/apiface:ubuntu18
+-v /home/ubuntu/workspace/face-recognition/v1.0/:/workspace/ risetai/apiface:ubuntu18

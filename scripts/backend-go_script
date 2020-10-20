@@ -1,5 +1,0 @@
-#!/bin/bash
-tmux new -s backend-go -d
-tmux send-keys -t backend-go:0 "cd /home/ubuntu/workspace/fr-backend-go/ && \
-go build main.go && ./main" C-m
-tmux new-window -t backend-go:1

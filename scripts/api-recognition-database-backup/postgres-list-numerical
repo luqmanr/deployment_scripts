@@ -1,1 +1,0 @@
-select user_id_rkb from recog_user order by substring(user_id_rkb from '([0-9]+)')::BIGINT ASC, user_id_rkb;

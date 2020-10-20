@@ -1,0 +1,4 @@
+__pycache__/
+migrations/
+media/img_inference/
+.env

@@ -1,0 +1,27 @@
+Install XFCE and VNC4Server
+guide to installation: 
+`https://computingforgeeks.com/how-to-install-vnc-server-on-ubuntu-18-04-lts/`
+
+BUT then edit `~/.vnc/xstartup`
+contents:
+```
+#!/bin/sh
+autocutsel -fork
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+startxfce4 &
+
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+vncconfig -iconic &
+```
+
+Run command:
+`vncserver :1 -localhost no -geometry 1280x720 -depth 24`
+
+Kill command:
+`vncserver -kill :1`
+
+-- NOTES --
+change `:1` to whatever number of display you want to run

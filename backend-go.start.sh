@@ -1,4 +1,6 @@
 #!/bin/bash
+scriptdir="$(dirname "$0")"
+
 tmux new -s backend-go -d
 
 ## run main backend-go app

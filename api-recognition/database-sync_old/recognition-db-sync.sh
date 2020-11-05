@@ -16,5 +16,3 @@ do
             PGPASSWORD=$dbpass pg_restore --clean -U $dbuser -d $dbname &
     done < "$tables"
 done < "$pass"
-
-# $HOME/scripts/api-recognition-database-backup/core-fr-img-sync_script

@@ -13,7 +13,6 @@ rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p $remote_port" \
 $remote_user@$remote_IP:$remote_home/workspace/face-recognition/v1.0/media/data_face_mask/ \
 $HOME/workspace/face-recognition/v1.0/media/data_face_mask/
 
-
 ## sync .csv database
 rsync -chavzP --delete-after -e "sshpass -p adminRKB ssh -p $remote_port" \
 $remote_user@$remote_IP:$remote_home/workspace/face-recognition/fr_dam/media/csv_database_mask/ \

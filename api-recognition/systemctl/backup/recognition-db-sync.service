@@ -1,0 +1,11 @@
+[Unit] 
+Description= API Recognition database sync service, from master -> slave
+# After=network.target
+
+[Service] 
+User=ubuntu
+Group=ubuntu
+ExecStart=/home/ubuntu/scripts/api-recognition-database-backup/recognition-db-sync_script
+
+[Install] 
+WantedBy= multi-user.target

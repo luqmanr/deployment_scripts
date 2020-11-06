@@ -1,0 +1,14 @@
+[Unit]
+Description=riset.ai Face Recognition API Service
+After=network.target
+# StartLimitBurst=10
+
+[Service]
+# ExecStartPre=/bin/sleep 30
+ExecStart=/home/ubuntu/scripts/api-recognition_script
+TimeoutStopSpec=5000
+# Restart=always
+# RestartSec=5000
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+# recognition-db_sync.timer
+[Unit] 
+Description=Runs the api-recognition-programs.service
+
+[Timer] 
+OnBootSec=1m
+OnCalendar=*:0/15 
+# OnCalendar=*-*-* *:*:00
+Persistent=true
+Unit=api-recognition-programs.service
+
+[Install] 
+WantedBy=multi-user.target

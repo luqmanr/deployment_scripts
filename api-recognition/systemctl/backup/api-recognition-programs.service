@@ -1,0 +1,12 @@
+[Unit]
+Description= API Recognition program sync service, from master -> slave
+# After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+ExecStartPre=/home/ubuntu/scripts/api-recognition-program-backup/backend-go-program-backup.script
+ExecStart=/home/ubuntu/scripts/api-recognition-program-backup/core-fr-program-backup.script
+
+[Install]
+WantedBy= multi-user.target

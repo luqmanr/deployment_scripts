@@ -1,0 +1,1 @@
+rsync -chavzP --delete-after ./origin/* ./destination/

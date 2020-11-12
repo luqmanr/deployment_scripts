@@ -1,1 +1,12 @@
-/lib/systemd/system/api-recognition-db-sync.timer
+# recognition-db_sync.timer
+[Unit] 
+Description=Runs the api-recognition-db-sync.service
+
+[Timer] 
+OnBootSec=1m
+OnCalendar=*:0/15
+# OnCalendar=*-*-* *:*:00 ## if you want to execute every minute 
+Unit=api-recognition-db-sync.service 
+
+[Install] 
+WantedBy=multi-user.target

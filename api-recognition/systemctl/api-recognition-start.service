@@ -1,0 +1,12 @@
+[Unit] 
+Description= API Recognition autostart service
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+ExecStart=/home/ubuntu/scripts/api-recognition/program-deployment/api-recognition.start.sh
+TimeoutStopSpec=5000
+
+[Install] 
+WantedBy= multi-user.target

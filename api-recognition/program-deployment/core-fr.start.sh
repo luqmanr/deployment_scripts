@@ -1,14 +1,13 @@
 #!/bin/bash
-scriptdir="$(dirname "$0")"
 ## Start Docker Containers
-$scriptdir/FR-Docker.start.sh
-$scriptdir/SSD-Docker.start.sh
+${BASH_SOURCE%/*}/FR-Docker.start.sh
+${BASH_SOURCE%/*}/SSD-Docker.start.sh
 
 sleep 10
 
 ## Prepare tmux windows For Monitoring
 tmux new -s core-fr -d
-for i in {1..4}
+for i in {1..3}
 do
 	tmux new-window -t core-fr:$i
 done

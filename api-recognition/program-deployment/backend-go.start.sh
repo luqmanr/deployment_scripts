@@ -1,5 +1,5 @@
 #!/bin/bash
-scriptdir="$(dirname "$0")"
+scriptdir="${BASH_SOURCE%/*}"
 
 tmux new -s backend-go -d
 

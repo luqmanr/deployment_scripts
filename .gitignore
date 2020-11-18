@@ -5,3 +5,4 @@
 *.env
 *.pass
 sshfs/
+database-sync_old/

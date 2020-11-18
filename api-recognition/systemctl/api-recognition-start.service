@@ -6,8 +6,6 @@ After=network.target
 User=ubuntu
 Group=ubuntu
 ExecStart=/home/ubuntu/scripts/api-recognition/program-deployment/api-recognition.start.sh
-Restart=always
-RestartSec=60
 # TimeoutStopSpec=5000
 
 [Install] 

@@ -8,7 +8,7 @@ docker run --gpus device=0 --rm -it -d \
 --shm-size=12g \
 --cpus=".5" \
 --memory="8g"  \
---memory-swap="8g" \
+--memory-swap="-1" \
 --name=api-recognition \
 --privileged \
 -v /rkbdev/facetablet/data/:/rkbdev/facetablet/data/ \

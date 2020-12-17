@@ -3,9 +3,9 @@ Description= API Recognition database sync service, from master -> slave
 After=network.target
 
 [Service]
-User=ubuntu
-Group=ubuntu
-ExecStart=/home/ubuntu/scripts/api-recognition/database-sync/api-recognition-db_sync.sh
+User=riset-ai
+Group=riset-ai
+ExecStart=/home/riset-ai/scripts/api-recognition/database-sync/api-recognition-db_sync.sh
 
 [Install] 
 WantedBy= multi-user.target

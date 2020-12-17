@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run --gpus device=0 --rm -it -d \
+nvidia-docker run --rm -it -d \
 -v /home/user/.Xauthority:/home/user/.Xauthority \
 -v /tmp/.X11-unix/:/tmp/.X11-unix \
 -e DISPLAY=${DISPLAY} \
@@ -8,4 +8,4 @@ docker run --gpus device=0 --rm -it -d \
 --name=api-recognition \
 --privileged \
 -v /rkbdev/facetablet/data/:/rkbdev/facetablet/data/ \
--v /home/ubuntu/workspace/face-recognition/v1.0/:/workspace/ risetai/apiface:ubuntu18
+-v /home/riset-ai/workspace/face-recognition/v1.0/:/workspace/ risetai/apiface:ubuntu18

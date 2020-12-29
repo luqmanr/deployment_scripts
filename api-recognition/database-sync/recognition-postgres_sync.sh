@@ -1,5 +1,5 @@
 #!/bin/bash
-config_file="${BASH_SOURCE%/*}/database.env"
+config_file="${BASH_SOURCE%/*}/recognition-db.env"
 set -a; source $config_file; set +a
 
 echo "syncing for database $bg_dbname"

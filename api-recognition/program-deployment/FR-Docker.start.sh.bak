@@ -1,6 +1,10 @@
 #!/bin/bash
 docker run --gpus device=0 --rm -it -d \
---network host \
+-v /home/user/.Xauthority:/home/user/.Xauthority \
+-v /tmp/.X11-unix/:/tmp/.X11-unix \
+-e DISPLAY=${DISPLAY} \
+--device=/dev/video0:/dev/video0 \
+-p 3000:3000 \
 --memory="8g" \
 --cpus="1.0" \
 --name=api-recognition \

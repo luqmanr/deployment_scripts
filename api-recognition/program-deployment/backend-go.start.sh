@@ -9,8 +9,8 @@ go build main.go && ./main" C-m
 
 ## run decodebase64 microservice
 tmux new-window -t backend-go:1
-tmux send-keys -t backend-go:1 "cd /home/ubuntu/workspace/fr-backend-go/microservices/decode_base64/golang/ && \
-go build decodeBase64.go && ./decodeBase64" C-m
+# tmux send-keys -t backend-go:1 "cd /home/ubuntu/workspace/fr-backend-go/microservices/decode_base64/golang/ && \
+# go build decodeBase64.go && ./decodeBase64" C-m
 
 tmux new-window -t backend-go:2
 tmux send-keys -t backend-go:2 "cd /home/ubuntu/workspace/fr-backend-go/microservices/decode_base64/python/ && \

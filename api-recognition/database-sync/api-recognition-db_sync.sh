@@ -1,5 +1,5 @@
 #!/bin/bash
-"${BASH_SOURCE%/*}/postgresql_sync.sh"
-"${BASH_SOURCE%/*}/core-fr-img_sync.sh"
+"${BASH_SOURCE%/*}/recognition-postgres_sync.sh"
+"${BASH_SOURCE%/*}/recognition-core-db_sync.sh"
 
 return 0

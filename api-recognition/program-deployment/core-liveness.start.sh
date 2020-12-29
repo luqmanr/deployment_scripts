@@ -13,9 +13,7 @@ done
 
 ## Execute Programs Inside Docker Containers, Using tmux
 # sleep 5
-# tmux send-keys -t core-liveness:1 "docker exec -it api-liveness python3 -m model_server.runserver lib/FeatureExtractor/serving.py" C-m
 tmux send-keys -t core-liveness:2 "docker exec -it api-liveness python3 -m model_server.runserver lib/FaceLandmark/serving.py --grpc_port=5002" C-m
 # sleep 10
 tmux send-keys -t core-liveness:0 "docker exec -it api-liveness python3 router.py" C-m
-#sleep infinity
-tmux send-keys -t core-fr:3 "echo 'hello-world!'" C-m
+tmux send-keys -t core-fr:3 "echo 'core liveness started!'" C-m

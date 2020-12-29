@@ -1,8 +1,8 @@
 #!/bin/bash
 ## Start Docker Containers
-${BASH_SOURCE%/*}/FR-Docker.start.sh
-${BASH_SOURCE%/*}/SSD-Docker.start.sh
-sleep 5
+#${BASH_SOURCE%/*}/FR-Docker.start.sh
+#${BASH_SOURCE%/*}/SSD-Docker.start.sh
+#sleep 5
 
 ## Prepare tmux windows For Monitoring
 tmux new -s core-fr -d
@@ -17,5 +17,5 @@ tmux send-keys -t core-fr:1 "docker exec -it api-recognition python3 -m model_se
 tmux send-keys -t core-fr:2 "docker exec -it api-recognition python3 new_auto_training.py" C-m
 # sleep 10
 tmux send-keys -t core-fr:0 "docker exec -it api-recognition python3 fr_api.py" C-m
-sleep infinity
+#sleep infinity
 tmux send-keys -t core-fr:3 "echo 'hello-world!'" C-m
